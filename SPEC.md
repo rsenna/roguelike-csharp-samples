@@ -2,7 +2,7 @@
 
 ## Purpose
 
-**roguelike-csharp-samples** is a historical multi-generation C# roguelike samples. This document records the inferred product boundary and current engineering state; source code and tests remain authoritative where they disagree.
+**roguelike-csharp-samples** is a historical, multi-generation set of C# roguelike samples. This document records the inferred product boundary and current engineering state; source code and tests remain authoritative where they disagree.
 
 ## Current status
 

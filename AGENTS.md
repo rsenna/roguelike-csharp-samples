@@ -2,7 +2,7 @@
 
 ## Repository
 
-This repository is **roguelike-csharp-samples**, a historical multi-generation C# roguelike samples. The repository slug is the canonical project name in documentation and release metadata.
+This repository is **roguelike-csharp-samples**, a collection of historical multi-generation C# roguelike samples. The repository slug is the canonical project name in documentation and release metadata.
 
 ## Working rules
 

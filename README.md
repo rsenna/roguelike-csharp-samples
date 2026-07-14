@@ -29,3 +29,7 @@ Archived/incomplete samples. Sample 1 represents the legacy baseline; Samples 2 
 ## Next steps
 
 Decide whether preservation or modernization is the priority. For preservation, pin reproducible toolchains and add build notes. For modernization, create a new supported-.NET sample using current SadConsole/GoRogue APIs, port behavior incrementally, and add headless domain tests.
+
+## License
+
+MIT. See `LICENSE` for the full text and project attribution.

@@ -1,52 +1,31 @@
-# Purpose
+# roguelike-csharp-samples
 
-This repository _started_ as a simple fork of https://github.com/FaronBracy/RogueSharpSadConsoleSamples.
-Then I added some refactors. Then I tried to upgrade both RogueSharp and SadConsole.
+roguelike-csharp-samples is a historical comparison of C# roguelike implementations across generations of SadConsole and related libraries. It preserves a legacy SadConsole 2.5/RogueSharp sample, a partial SadConsole 8.99 port, and a partial GoRogue-based tutorial sample.
 
-RogueSharp was easy, hardly any breaking changes. But SadConsole is a whole another story. Original source code was using SadConsole.Core v2.5. In order to move to SadConsole v8 I had to make a lot of changes (still WIP).
+## Technical stack
 
-I decided to keep both SadConsole versions - Sample1 is the original SadConsole legacy version, and Sample2 is the new one. Keeping them both shows how the SadConsole API has changed along time, and I think there's value in being able to easily compare between those two versions.
+- C#
+- Sample 1: .NET Framework 4.7.2, SadConsole 2.5, RogueSharp 4.2
+- Sample 2: .NET Core 3.1, SadConsole 8.99, RogueSharp 4.2
+- Sample 3: .NET Core 3.1, SadConsole 8.99, GoRogue 2.6
+- MonoGame backends and bundled bitmap fonts
 
-I also added a new Sample3, from [The SadConsole Roguelike Tutorial Series](https://ansiware.com/), which uses GoRogue instead of RogueSharp.
+## Build
 
-##### TODO
-- [ ] Fix Sample2.
-- [ ] Complete Sample3.
+Open `RoguelikeSamples.sln` in a compatible Visual Studio installation and restore NuGet packages. Modern .NET SDKs do not necessarily support every historical target or Windows-specific backend.
 
-## Additional Resources
+## Status
 
-- [Creating a Roguelike Game in C#](http://roguesharp.wordpress.com/ "Creating a Roguelike Game in C#")
-- [SadConsole Tutorials and Source](https://github.com/Thraka/SadConsole/wiki "SadConsole Tutorials")
-- [The SadConsole Roguelike Tutorial Series](https://ansiware.com/)
-- [RogueSharp](https://github.com/FaronBracy/RogueSharp)
-- [GoRogue](https://github.com/Chris3606/GoRogue)
-- [RogueBasin](http://www.roguebasin.com/ "RogueBasin")
-	- [Articles of interest for Roguelike developers](http://www.roguebasin.com/index.php?title=Articles "Roguelike developer articles")
-- [Roguelike Dev Subreddit](https://www.reddit.com/r/roguelikedev)
+Archived/incomplete samples. Sample 1 represents the legacy baseline; Samples 2 and 3 remain unfinished migrations.
 
-## License
+## Known limitations
 
-#### Roguelike C# Samples ####
+- .NET Core 3.1 and several game libraries are obsolete.
+- Sample 1 depends on legacy project format and Windows/MonoGame packages.
+- Samples 2 and 3 are not complete.
+- There are no automated tests or CI builds.
+- A direct major dependency upgrade would require substantial API and rendering rewrites.
 
-The MIT License (MIT)
+## Next steps
 
-Copyright for portions of this project are held by Faron Bracy (2016) and
-ansi|ware (2019). All other copyright are held by Rogério Senna, 2020.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Decide whether preservation or modernization is the priority. For preservation, pin reproducible toolchains and add build notes. For modernization, create a new supported-.NET sample using current SadConsole/GoRogue APIs, port behavior incrementally, and add headless domain tests.
